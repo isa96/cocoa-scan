@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Loading...</title>
+  <script>
+    function navigate() {
+        window.location.href = 'success';  // Redirects user to the /map route when 'create_map' is finished
+    }
+    fetch('success',{
+      method: "POST", enctype:"multipart/form-data"}).then(navigate); // Performing 'create_map' and then calls navigate() function, declared above
+  </script>
+  <link rel='stylesheet' href={{url_for('static' , filename = 'css/load.css')}}>
+</head>
+
+<body>
+  <div class="loader"></div>
+</body>
+
+</html>
